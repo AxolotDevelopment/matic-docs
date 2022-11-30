@@ -42,7 +42,7 @@ There is limited space for accepting new validators. New validators can only joi
 * On the local machine, [Python 3.x](https://www.python.org/downloads/) installed.
 * On the remote machines, make sure Go is *not* installed.
 * On the remote machines, your local machine's SSH public key is on the remote machines to let Ansible connect to them.
-* We have Bloxroute available as a relay network. If you need a gateway to be added as your Trusted Peer please contact [Delroy on Discord](http://delroy/#0056).
+* We have Bloxroute available as a relay network. If you need a gateway to be added as your Trusted Peer please contact **@validator-support-team** in [Polygon Discord](https://discord.com/invite/0xPolygon) > POS VALIDATORS | FULL NODE PROVIDERS | PARTNERS > bloxroute.
 
 ## Overview
 
@@ -246,16 +246,6 @@ Change the following:
 * `max_open_connections` — set the value to `100`. Example: `max_open_connections = 100`.
 
 Save the changes in `config.toml`.
-
-Open for editing `vi ~/.heimdalld/config/heimdall-config.toml`.
-
-In `heimdall-config.toml`, change your RPC endpoint to point to a fully synced Ethereum mainnet node:
-
-`eth_rpc_url = <insert Infura or any full node RPC URL to Ethereum>`
-
-For example: `eth_rpc_url = "https://nd-123-456-789.p2pify.com/60f2a23810ba11c827d3da642802412a"`
-
-Save the changes in `heimdall-config.toml`.
 
 ### Configure the Bor Service
 
