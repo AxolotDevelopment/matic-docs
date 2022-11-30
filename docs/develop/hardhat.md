@@ -116,7 +116,7 @@ module.exports = {
   networks: {
     hardhat: {
     },
-    matic: {
+    polygon_mumbai: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [process.env.PRIVATE_KEY]
     }
@@ -141,6 +141,8 @@ module.exports = {
 Note that the file above requires DOTENV, for managing environment variables and also ethers and etherscan. Make sure to install all those packages. 
 
 Find more instructions on how to use DOTENV on [<ins>this page</ins>](https://www.npmjs.com/package/dotenv).
+
+You can deploy on MATIC(Polygon mainnet) if you change polygon_mumbai by MATIC
 
 :::
 
@@ -175,7 +177,7 @@ And this is an expected output:
 Run this command in root of the project directory:
 
 ```bash
-npx hardhat run scripts/deploy.js --network matic
+npx hardhat run scripts/deploy.js --network polygon_mumbai
 ```
 
 The contract will be deployed on Matic's Mumbai Testnet, and you can check the deployment status here: https://mumbai.polygonscan.com/
@@ -188,6 +190,6 @@ Run the following commands to quickly verify your contract on Polygonscan. This 
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-etherscan
-npx hardhat verify --network matic 0x4b75233D4FacbAa94264930aC26f9983e50C11AF
+npx hardhat verify --network polygon_mumbai 0x4b75233D4FacbAa94264930aC26f9983e50C11AF
 ```
 :::
